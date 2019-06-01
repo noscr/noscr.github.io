@@ -2,9 +2,9 @@ var constants = {
   // Tabs in Google Sheet
   notesSheetName: 'Notes',
 	optionsSheetName: 'Options',
-	pointsSheetName: 'Points',
-  polygonsSheetName: 'Polygons',
-  polylinesSheetName: 'Polylines',
+	pointsSheetName: 'Service Providers',
+  polygonsSheetName: 'Demographics',
+  polylinesSheetName: null,
   /* OPTIONS */
 	// Map Info
   _mapTitle: 'Map Title',

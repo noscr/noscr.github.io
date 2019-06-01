@@ -70,7 +70,7 @@ $(window).on('load', function() {
     var layerNamesFromSpreadsheet = [];
     var layers = {};
     for (var i in points) {
-      var pointLayerNameFromSpreadsheet = points[i].Group;
+      var pointLayerNameFromSpreadsheet = points[i].Sector;
       if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
         markerColors.push(
           points[i]['Marker Icon'].indexOf('.') > 0
@@ -131,7 +131,7 @@ $(window).on('load', function() {
           point['Description']);
 
         if (layers !== undefined && layers.length !== 1) {
-          marker.addTo(layers[point.Group]);
+          marker.addTo(layers[point.Sector]);
         }
 
         markerArray.push(marker);
@@ -213,7 +213,7 @@ $(window).on('load', function() {
       function updateTable() {
         var pointsVisible = [];
         for (i in points) {
-          if (map.hasLayer(layers[points[i].Group]) &&
+          if (map.hasLayer(layers[points[i].Sector]) &&
               map.getBounds().contains(L.latLng(points[i].Latitude, points[i].Longitude))) {
             pointsVisible.push(points[i]);
           }
@@ -982,7 +982,7 @@ $(window).on('load', function() {
          mapData = Procsv;
          mapData.load({
            self: mapData,
-           tabs: ['Options', 'Points', 'Polygons', 'Polylines'],
+           tabs: ['Options', 'Service Providers', 'Demographics'],
            callback: onMapDataLoad
          });
        }
