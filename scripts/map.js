@@ -129,7 +129,7 @@ $(window).on('load', function() {
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           "<b>Organization Type</b> " + point['Service Type'] + "<br>" +
-          "<b>Phone Number</b> " + point['Phone Number'] + "<br>" +
+          (point['Phone Number'] ? ('<b>Phone Number</b> ' + point['Phone Number'] + '<br>') : '') +
           (point['Website'] ? ('<b>Website</b> <a href="' + point['Website'] + '">'+ point['Website'] + "</a>"): '')
           );
 
