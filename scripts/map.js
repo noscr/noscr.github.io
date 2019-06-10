@@ -256,8 +256,8 @@ $(window).on('load', function() {
         paging: false,
         scrollCollapse: true,
         scrollY: 'calc(' + tableHeight + 'vh - 40px)',
-        info: false,
-        searching: false,
+        info: true,
+        searching: true,
         columns: generateColumnsArray(),
       });
     }
